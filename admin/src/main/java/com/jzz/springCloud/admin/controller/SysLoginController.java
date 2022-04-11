@@ -4,13 +4,13 @@ import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.jzz.springCloud.admin.model.SysUser;
 import com.jzz.springCloud.admin.security.JwtAuthenticationToken;
-import com.jzz.springCloud.admin.security.SecurityUtils;
+import com.jzz.springCloud.admin.utils.SecurityUtils;
 import com.jzz.springCloud.admin.service.SysLoginLogService;
 import com.jzz.springCloud.admin.service.SysUserService;
-import com.jzz.springCloud.admin.utils.IPUtils;
+import com.jzz.springCloud.common.utils.IPUtils;
 import com.jzz.springCloud.admin.vo.LoginBean;
 import com.jzz.springCloud.common.utils.IOUtils;
-import com.jzz.springCloud.common.utils.PasswordUtils;
+import com.jzz.springCloud.admin.utils.PasswordUtils;
 import com.jzz.springCloud.core.http.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +30,7 @@ import java.io.IOException;
 
 @RestController
 @Api(tags = "登录和验证接口")
-public class LoginController {
+public class SysLoginController {
     @Autowired
     private Producer producer;
 
@@ -70,7 +70,7 @@ public class LoginController {
             return HttpResult.error("验证码已失效");
         }
         if (!captcha.equalsIgnoreCase(kaptcha)) {
-            return HttpResult.error("验证满不正确");
+            return HttpResult.error("验证码不正确");
         }
         SysUser user = sysUserService.findByName(username);
         if (user == null) {

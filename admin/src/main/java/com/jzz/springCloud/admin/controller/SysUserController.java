@@ -2,10 +2,10 @@ package com.jzz.springCloud.admin.controller;
 
 import com.jzz.springCloud.admin.constant.SysConstants;
 import com.jzz.springCloud.admin.model.SysUser;
-import com.jzz.springCloud.admin.security.SecurityUtils;
+import com.jzz.springCloud.admin.utils.SecurityUtils;
 import com.jzz.springCloud.admin.service.SysUserService;
 import com.jzz.springCloud.common.utils.FileUtils;
-import com.jzz.springCloud.common.utils.PasswordUtils;
+import com.jzz.springCloud.admin.utils.PasswordUtils;
 import com.jzz.springCloud.core.http.HttpResult;
 import com.jzz.springCloud.core.page.PageRequest;
 import io.swagger.annotations.Api;

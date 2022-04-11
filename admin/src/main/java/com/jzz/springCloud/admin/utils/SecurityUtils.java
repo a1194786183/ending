@@ -1,5 +1,6 @@
-package com.jzz.springCloud.admin.security;
+package com.jzz.springCloud.admin.utils;
 
+import com.jzz.springCloud.admin.security.JwtAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

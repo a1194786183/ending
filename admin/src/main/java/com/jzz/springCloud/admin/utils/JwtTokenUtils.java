@@ -1,5 +1,7 @@
-package com.jzz.springCloud.admin.security;
+package com.jzz.springCloud.admin.utils;
 
+import com.jzz.springCloud.admin.security.GrantedAuthorityImpl;
+import com.jzz.springCloud.admin.security.JwtAuthenticationToken;
 import io.jsonwebtoken.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

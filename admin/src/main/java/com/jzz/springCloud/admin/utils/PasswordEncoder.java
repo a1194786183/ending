@@ -1,4 +1,4 @@
-package com.jzz.springCloud.common.utils;
+package com.jzz.springCloud.admin.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

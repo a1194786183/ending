@@ -1,6 +1,6 @@
 package com.jzz.springCloud.admin.security;
 
-import com.jzz.springCloud.common.utils.PasswordEncoder;
+import com.jzz.springCloud.admin.utils.PasswordEncoder;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;

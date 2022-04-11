@@ -1,5 +1,6 @@
 package com.jzz.springCloud.admin.security;
 
+import com.jzz.springCloud.admin.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;

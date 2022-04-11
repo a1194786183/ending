@@ -3,10 +3,10 @@ package com.jzz.springCloud.admin.aspect;
 import javax.servlet.http.HttpServletRequest;
 
 import com.jzz.springCloud.admin.model.SysLog;
-import com.jzz.springCloud.admin.security.SecurityUtils;
+import com.jzz.springCloud.admin.utils.SecurityUtils;
 import com.jzz.springCloud.admin.service.SysLogService;
 import com.jzz.springCloud.admin.utils.HttpUtils;
-import com.jzz.springCloud.admin.utils.IPUtils;
+import com.jzz.springCloud.common.utils.IPUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -48,13 +48,6 @@ public class SysLogAspect {
         }
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         SysLog sysLog = new SysLog();
-
-//		Method method = signature.getMethod();
-//		com.louis.merak.admin.annotation.SysLog syslogAnno = method.getAnnotation(com.louis.merak.admin.annotation.SysLog.class);
-//		if(syslogAnno != null){
-//			//注解上的描述
-//			sysLog.setOperation(syslogAnno.value());
-//		}
 
         // 请求的方法名
         String className = joinPoint.getTarget().getClass().getName();

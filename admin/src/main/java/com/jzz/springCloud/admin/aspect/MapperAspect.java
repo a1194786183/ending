@@ -5,7 +5,7 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.jzz.springCloud.admin.security.SecurityUtils;
+import com.jzz.springCloud.admin.utils.SecurityUtils;
 import com.jzz.springCloud.common.utils.StringUtils;
 import org.apache.commons.beanutils.BeanUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
