@@ -6,11 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysRoleMenuMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysRoleMenuMapper extends MyBatisBaseDao<SysRoleMenu, Long> {
     /**

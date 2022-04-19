@@ -5,11 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysDeptMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysDeptMapper extends MyBatisBaseDao<SysDept, Long> {
     /**

@@ -6,11 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysRoleMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysRoleMapper extends MyBatisBaseDao<SysRole, Long> {
     /**

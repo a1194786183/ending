@@ -6,10 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysDictMapper继承基类
- * @author liangshanguang
- */
 @Repository
 public interface SysDictMapper extends MyBatisBaseDao<SysDict, Long> {
     /**

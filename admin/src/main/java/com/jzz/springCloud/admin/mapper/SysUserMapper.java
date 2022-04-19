@@ -6,9 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysUserMapper继承基类
- */
 @Repository
 public interface SysUserMapper extends MyBatisBaseDao<SysUser, Long> {
     /**

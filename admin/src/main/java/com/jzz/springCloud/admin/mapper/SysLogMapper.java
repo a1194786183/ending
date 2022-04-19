@@ -6,11 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysLogMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysLogMapper extends MyBatisBaseDao<SysLog, Long> {
     /**

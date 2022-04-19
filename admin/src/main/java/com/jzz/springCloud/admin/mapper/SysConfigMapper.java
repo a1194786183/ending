@@ -6,11 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysConfigMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysConfigMapper extends MyBatisBaseDao<SysConfig, Long> {
     /**

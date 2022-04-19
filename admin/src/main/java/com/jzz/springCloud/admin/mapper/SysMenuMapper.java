@@ -6,11 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * SysMenuMapper继承基类
- *
- * @author liangshanguang
- */
 @Repository
 public interface SysMenuMapper extends MyBatisBaseDao<SysMenu, Long> {
     List<SysMenu> findPage();
