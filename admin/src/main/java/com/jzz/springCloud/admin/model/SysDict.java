@@ -3,11 +3,6 @@ package com.jzz.springCloud.admin.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * sys_dict
- *
- * @author liangshanguang
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class SysDict extends BaseModel {

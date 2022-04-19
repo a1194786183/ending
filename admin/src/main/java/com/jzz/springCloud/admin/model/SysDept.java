@@ -5,11 +5,6 @@ import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
-/**
- * sys_dept
- *
- * @author liangshanguang
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class SysDept extends BaseModel {

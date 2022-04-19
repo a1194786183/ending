@@ -6,11 +6,6 @@ import lombok.EqualsAndHashCode;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * sys_user
- *
- * @author liangshanguang
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class SysUser extends BaseModel {
