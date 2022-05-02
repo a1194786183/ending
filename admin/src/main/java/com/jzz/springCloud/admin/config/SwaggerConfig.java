@@ -21,7 +21,7 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+public class SwaggerConfig extends WebMvcConfigurationSupport{
     @Bean
     public Docket createRestApi() {
         // 添加请求参数，这里我们把token作为请求头部参数传入后端
@@ -30,7 +30,8 @@ public class SwaggerConfig {
         parameterBuilder.name("token").description("jwt生成的令牌").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
         parameters.add(parameterBuilder.build());
         return new Docket(DocumentationType.SWAGGER_2)
-                .host("localhost:8080")
+                .enable(true)
+                .host("localhost:9528")
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.jzz.springCloud.admin.controller"))
@@ -45,5 +46,18 @@ public class SwaggerConfig {
                 .version("1.0")
                 .description("info")
                 .build();
+    }
+
+    @Override
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // 解决静态资源无法访问
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/");
+        // 解决swagger无法访问
+        registry.addResourceHandler("/swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+        // 解决swagger的js文件无法访问
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 }
