@@ -2,6 +2,7 @@ package com.jzz.springCloud.admin.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -21,7 +22,8 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig extends WebMvcConfigurationSupport{
+@EnableWebMvc
+public class SwaggerConfig extends WebMvcConfigurationSupport {
     @Bean
     public Docket createRestApi() {
         // 添加请求参数，这里我们把token作为请求头部参数传入后端
