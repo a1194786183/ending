@@ -26,6 +26,8 @@ public class MapperAspect {
     private static final String LAST_UPDATE_BY = "lastUpdateBy";
     private static final String LAST_UPDATE_TIME = "lastUpdateTime";
 
+    // Pointcut(切入点)： JoinPoint的集合，是程序中需要注入Advice的位置的集合
+    // 指明Advice要在什么样的条件下才能被触发，在程序中主要体现为书写切入点表达式。
     @Pointcut("execution(* com.jzz.springCloud.*.mapper.*.update*(..))")
     public void daoUpdate() {
     }
@@ -34,6 +36,7 @@ public class MapperAspect {
     public void daoCreate() {
     }
 
+    // 环绕增强
     @Around("daoUpdate()")
     public Object doAroundUpdate(ProceedingJoinPoint pjp) throws Throwable {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
